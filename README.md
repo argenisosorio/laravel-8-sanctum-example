@@ -1,6 +1,4 @@
-# Laravel 8 - CRUD Example
-
-Base on: <a href="https://github.com/Kingsconsult/laravel_8_crud">https://github.com/Kingsconsult/laravel_8_crud</a>
+# Laravel 8 Sanctum Example
 
 ## Requirements
 ```
@@ -29,4 +27,7 @@ $ php artisan migrate
 
 $ php artisan serve
 
-3- Next, you may navigate to you URL http://127.0.0.1:8000/projects
+3- Next, you may navigate to you URL http://127.0.0.1:8000/
+
+4- To test the api you must make a post request to /api/register sending name,
+email and password in the request.
