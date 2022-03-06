@@ -8,6 +8,13 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Register, method that allows receiving data from a request, validating it
+    | and storing it in the users and tokens table, it returns a json response
+    | with the assigned token.
+    |--------------------------------------------------------------------------
+    */
     public function register(Request $request)
     {
         $request->validate([
