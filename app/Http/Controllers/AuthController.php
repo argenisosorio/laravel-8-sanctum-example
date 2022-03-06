@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -15,7 +16,11 @@ class AuthController extends Controller
             'password' => 'required|string|min:8',
         ]);
 
-        $user = User::create($request->all());
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password'])
+        ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
